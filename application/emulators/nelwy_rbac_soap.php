@@ -2,7 +2,7 @@
 /**
  * Abstraction layer for supporting different emulators
  */
-class Trinity_rbac_soap implements Emulator
+class Nelwy_rbac_soap implements Emulator
 {
 	protected $config;
 
