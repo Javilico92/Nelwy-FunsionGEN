@@ -148,21 +148,7 @@ class Character extends MX_Controller
 		$this->guild = $this->armory_model->getGuild();
 		$this->guildName = $this->armory_model->getGuildName($this->guild);
 
-		if(in_array($this->race, array(4,10)))
-		{
-			if($this->race == 4)
-			{
-				$this->raceName = "Night elf";
-			}
-			else
-			{
-				$this->raceName = "Blood elf";
-			}
-		}
-		else
-		{
-			$this->raceName = $this->armory_model->realms->getRace($this->race);
-		}
+		$this->raceName = $this->armory_model->realms->getRace($this->race);
 
 		$this->className = $this->armory_model->realms->getClass($this->class);
 		$this->realmName = $this->armory_model->realm->getName();
