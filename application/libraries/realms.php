@@ -183,7 +183,7 @@ class Realms
 	 */
 	public function getAllianceRaces()
 	{
-		if(!count($this->allianceRaces))
+		if(!$this->allianceRaces || !count($this->allianceRaces))
 		{
 			$this->loadConstants();
 		}
@@ -197,7 +197,7 @@ class Realms
 	 */
 	public function getHordeRaces()
 	{
-		if(!count($this->hordeRaces))
+		if(!$this->hordeRaces || !count($this->hordeRaces))
 		{
 			$this->loadConstants();
 		}
@@ -212,7 +212,7 @@ class Realms
 	 */
 	public function getRace($id)
 	{
-		if(!count($this->races))
+		if(!$this->races || !count($this->races))
 		{
 			$this->loadConstants();
 		}
@@ -234,7 +234,7 @@ class Realms
 	 */
 	public function getClass($id)
 	{
-		if(!count($this->classes))
+		if(!$this->classes || !count($this->classes))
 		{
 			$this->loadConstants();
 		}
@@ -256,7 +256,7 @@ class Realms
 	 */
 	public function getZone($zoneId)
 	{
-		if(!count($this->zones))
+		if(!$this->zones || !count($this->zones))
 		{
 			$this->loadZones();
 		}
@@ -325,7 +325,7 @@ class Realms
 	*/
 	public function formatAvatarPath($character)
 	{
-		if(!count($this->races_en))
+		if(!$this->races_en || !count($this->races_en))
 		{
 			$this->loadConstants();
 		}
